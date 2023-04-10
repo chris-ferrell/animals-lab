@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+
+        species: String,
+        extinct: Boolean,
+        location: String,
+        lifeExpectancy: Number
+
+     -->
+    <main>
+        <div>
+            <form action="/animals" method="post">
+                <fieldset>
+                    <legend>add a new species </legend>
+                    </legend>
+                    <label>
+                        Species:<input type="text" name="species"   placeholder="enter animal name" />
+                    </label>
+        
+                    <label>
+                        location:<input type="text" name="location"  placeholder="where the animals from" />
+                    </label>
+                    <label>
+                        lifeExpectancy:<input type="text" name="lifeExpectancy" placeholder="max age" />
+                    </label>
+                    <label>
+                        Extinct:<input type="checkbox" name="exinct" /> 
+                    </label>
+                </fieldset>
+                <input type="submit" value="add new species" />
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
