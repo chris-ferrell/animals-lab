@@ -18,11 +18,17 @@ app.use(express.urlencoded({exteneded: true})); // parse urlencoded request bodi
 app.use(express.static("public")); // serve files from public statically 
 
 
-// Routes
+
+// Routes   
 app.get("/", (req, res) => {
     res.send("default route hit");
 });
  
+
+// Routers
+const animalsController = require('./controller/animals');
+app.use('/animals', animalsController);
+
 app.get("/seed", async (req, res) => {
     await Animal.deleteMany({});
     await Animal.create(startAnimals);
