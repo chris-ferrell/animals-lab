@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <body>
+        
+            <main>
+                <div>
+                    <form action="/animals/<%= animal._id %>?_method=PUT" method="post">
+                        <fieldset>
+                            <legend>Editing <%=animal.species %>
+                            </legend>
+                            <label>
+                                Species:<input type="text" name="species" value="<%= animal.speices %>" placeholder="enter animal name" />
+                            </label>
+                
+                            <label>
+                                location:<input type="text" name="location" value="<%= animal.location %>" placeholder="where the animals from" />
+                            </label>
+                            <label>
+                                lifeExpectancy:<input type="text" name="lifeExpectancy" value="<%=animal.lifeExpectancy %>" placeholder="max age" />
+                            </label>
+                            <label>
+                                Extinct:<input type="checkbox" name="exinct" <%= animal.extinct ? "checked" : "" %> /> 
+                            </label>
+                        </fieldset>
+                        <input type="submit" value="Update <%= animal.species %>" />
+                    </form>
+                </div>
+            </main>
+    </body>
+
+</html>
