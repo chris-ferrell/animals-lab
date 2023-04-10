@@ -34,7 +34,11 @@ const animals = require('../models/animals.js');
         const animal = await animals.findById(req.params.id);
         res.render("animals/edit.ejs", {animal});
     })
-
+    // Delete
+    router.delete('/:id', async (req, res) => {
+        const animal = await animals.findByIdAndDelete(req.params.id);
+        res.redirect('/animals');
+    })
     // Show
     router.get('/', async (req,res) => {
         const Animals = await animals.find({});
